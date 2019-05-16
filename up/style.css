@@ -220,7 +220,6 @@ body {
 
 img,
 video { 
-    max-height: 100%;
     max-width: 100%;
     z-index: 50;
 }
@@ -443,11 +442,11 @@ p {
     }
 
     .variant-one {
-        grid-template-columns: 82vw auto;
+        grid-template-columns: calc(82vw - 45px) auto;
     }
 
     .variant-two {
-        grid-template-columns: auto 82vw;
+        grid-template-columns: auto calc(82vw - 45px);
     }
 
     .variant-one > h1,
