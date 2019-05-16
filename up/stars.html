@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- AFRAME -->
+    <script src="https://aframe.io/releases/0.9.0/aframe.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+
+    <!-- LAYOUT -->
+    <script src="https://unpkg.com/aframe-layout-component@5.3.0/dist/aframe-layout-component.min.js"></script>
+    <!-- LOOK-AT -->
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.x/dist/aframe-look-at-component.min.js"></script>
+    <!-- ENVIRONMENT -->
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <!-- EXTRAS -->
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.js"></script>
+    <!-- EVENT-SET -->
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+    <!-- SRC-FIT -->
+    <script src="https://rawgit.com/chenzlabs/aframe-src-fit-component/master/dist/aframe-src-fit-component.min.js"></script>
+    
+    
+    <style>
+        .a-enter-vr-button{display:none}
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- Specify our scene. -->
+    <a-scene renderer="antialias:true" background="color: black" loading-screen="dotsColor: white; backgroundColor: black">
+        
+        
+        <a-assets>
+            <a-mixin id="environment" material="opacity:1; shader: flat; side: back" geometry="primitive: sphere"></a-mixin>
+            <img id="milky_1" src="Physics/milkyway_panorama.jpg">
+        </a-assets>
+        
+        <a-entity camera look-controls="touchEnabled: false" position="0 1.6 0"></a-entity>
+        
+        <a-sky material="src:#milky_1" animation="property: rotation; from: 0 0 360; to: 0 360 0; loop: true; dur: 100000; easing: linear;"></a-sky>
+
+    </a-scene>
+</body>
