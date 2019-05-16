@@ -280,11 +280,11 @@ iframe {
 }
 
 .variant-one {
-    grid-template-columns: auto 50vw;
+    grid-template-columns: auto calc(50vw - 45px);
 }
 
 .variant-two {
-    grid-template-columns: 50vw auto;
+    grid-template-columns: calc(50vw - 45px) auto;
 }
 
 .variant-three {
