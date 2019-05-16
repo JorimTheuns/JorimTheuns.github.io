@@ -169,7 +169,7 @@ body {
 
 .background {
     height:100%;
-    background-image: url(Physics/milkyway_panorama.jpg);
+    background-image: url(Physics/milkyway_panorama_small.jpg);
     background-size: cover;
     background-position: 22% top;
 }
