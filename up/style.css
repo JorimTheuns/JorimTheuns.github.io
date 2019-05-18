@@ -279,6 +279,22 @@ iframe {
     z-index: 100;
 }
 
+a > span:hover {
+    background-color: white;
+    color: black;
+    line-height: 1.4em;
+}
+
+a > span {
+    background-color: black;
+    color: white;
+    line-height: 1.4em;
+}
+
+a{
+    text-decoration: none;
+}
+
 .variant-one {
     grid-template-columns: auto calc(50vw - 45px);
 }
@@ -291,12 +307,14 @@ iframe {
     grid-template-columns: auto;
 }
 
+
 .variant-four {
+    background-color: white;
     position: fixed;
     left:0;
-    right:0;
+    width:50px;
     top:0;
-    grid-template-rows: min-content min-content min-content 100px;
+    grid-template-rows: min-content min-content min-content min-content 100vh;
     justify-items: start;
     
 }
