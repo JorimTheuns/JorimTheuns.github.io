@@ -1,3 +1,13 @@
+@font-face {
+    font-family: SpaceFont;
+    src: url("SpaceGrotesk-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: BeatriceDisplayLight;
+    src: url("BeatriceDisplay-Light.otf") format("opentype");
+}
+
 * {
     vertical-align: baseline;
     font-weight: inherit;
@@ -20,7 +30,7 @@ html {
 
 body {
     padding: 5px;
-    font-size: calc(14px + (36 - 14) * ((100vw - 300px) / (1920 - 300)));
+    font-size: calc(12px + (32 - 14) * ((100vw - 300px) / (1920 - 300)));
 }
 
 h1,
@@ -28,11 +38,16 @@ h2,
 h3,
 p,
 blockquote {
-    line-height: 1.2em;
+    line-height: 1.4em;
 }
 
 h1 {
     font-size: 3em;
+}
+
+.grid-container h1{
+    line-height: 2em;
+    padding-top: 1em;
 }
 
 h2 {
@@ -66,7 +81,8 @@ p {
 }
 
 span {
-    background-color: #000;
+    background: linear-gradient(to bottom, #0000 0%, #000f 30%,#000f 70%, #0000 100%);
+    background-clip:content-box;
 }
 
 .test {
@@ -78,14 +94,14 @@ h1,
 h2,
 h3,
 pre, a {
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: 'BeatriceDisplayLight', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-style: normal;
     font-variant: normal;
     font-weight: 700;
 }
 
 p {
-    font-family: serif;
+    font-family: 'SpaceFont', serif;
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
@@ -96,7 +112,7 @@ a{
 }
 
 blockquote {
-    font-family: serif;
+    font-family: 'News Cycle', serif;
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
@@ -261,7 +277,7 @@ iframe {
 .grid-container {
     grid-column: 2;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, auto));
+    grid-template-columns: repeat(auto-fill, minmax(175px, auto));
     grid-gap: calc(5px + (15 - 5) * ((100vw - 300px) / (1600 - 300)));
     grid-auto-flow: row;
     z-index: 100;
@@ -280,7 +296,7 @@ iframe {
 }
 
 a > span:hover {
-    background-color: white;
+    background: linear-gradient(to bottom, #fff0 0%, #ffff 20%,#ffff 80%, #fff0 100%);
     color: black;
     line-height: 1.4em;
 }
@@ -313,6 +329,7 @@ a{
     position: fixed;
     left:0;
     width:50px;
+    padding-top:10px;
     top:0;
     grid-template-rows: min-content min-content min-content min-content 100vh;
     justify-items: start;
@@ -341,8 +358,13 @@ a{
     text-align: left;
 }
 
+.variant-three > p {
+    justify-self: center;
+}
+
 .variant-three > img,
 .variant-three > video,
+.variant-three > iframe,
 .variant-three > .aspect-ratio {
     grid-column: 1;
     align-self: end;
@@ -353,12 +375,12 @@ a{
 .variant-one > p {
     grid-column: 1;
     justify-self: end;
-    align-self: end;
     text-align: right;
 }
 
 .variant-one > img,
 .variant-one > video,
+.variant-one > iframe,
 .variant-one > .aspect-ratio {
     grid-row: span 2;
     grid-column: 2;
@@ -375,6 +397,7 @@ a{
 
 .variant-two > img,
 .variant-two > video,
+.variant-two > iframe,
 .variant-two > .aspect-ratio {
     grid-row: span 2;
     grid-column: 1;
@@ -476,6 +499,7 @@ p {
 
     .variant-one > img,
     .variant-one > video,
+    .variant-one > iframe,
     .variant-one > .aspect-ratio {
         grid-row: 1;
         grid-column: 1;
@@ -501,6 +525,7 @@ p {
 
     .variant-two > img,
     .variant-two > video,
+    .variant-two > iframe,
     .variant-two > .aspect-ratio {
         grid-row: 1;
         grid-column: 2;
