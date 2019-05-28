@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="grt.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        $(function() {
+
+            var allClasses = [];
+
+            var allElements = document.querySelectorAll('p');
+
+            for (var i = 0; i < allElements.length; i++) {
+                var classes = allElements[i].className.toString().split(/\s+/);
+                for (var j = 0; j < classes.length; j++) {
+                    var cls = classes[j];
+                    if (cls && allClasses.indexOf(cls) === -1)
+                        allClasses.push(cls);
+                }
+            }
+
+            console.log(allClasses);
+
+            allClasses.forEach(function(elem) {
+                var button = $('<button/>', {
+                    text: elem, //set text 1 to 10
+                    id: elem,
+                    val: "on",
+                    click: function() {
+                        var val = $("button").val()
+                        if (val == "on") {
+                            $("#" + this.id).addClass("on");
+                            $("." + this.id).addClass("show");
+                            $("button").val("off")
+                        } else if (val == "off") {
+                            $("#" + this.id).removeClass("on");
+                            $("." + this.id).removeClass("show");
+                            $("button").val("on")
+                        }
+                    }
+                });
+                $("#filter").append(button);
+            });
+            sortUL("ul#refrences");
+        });
+
+        function sortUL(selector) {
+            $(selector).children("li").sort(function(a, b) {
+                console.log("sorting");
+                var upA = $(a).text().toUpperCase();
+                var upB = $(b).text().toUpperCase();
+                return (upA < upB) ? -1 : (upA > upB) ? 1 : 0;
+            }).appendTo(selector);
+        }
+
+    </script>
+</head>
+
+<body class="grt">
+    <h1>Thesis</h1>
+    <h2>WE DO NOT LIVE IN A DEMOCRACY</h2>
+    <p>I am fascinated by power. Possibly because I am subject to it, possibly because I grew up indoctrinated into believing in the all powerful. Why it fascinates me, analysed through some enlightened lens, would probably make for a great paper, but I am not so inclined. It is not my fascination with power, but power itself, its many flavours, that drive this attempt.</p>
+    <img src="https://dollecommunicationsblog.files.wordpress.com/2015/03/knowledge-information-is-power.jpg">
+    <p>Real power, if it even exists: where is it manifest? By what morality is it legitimized? In the Dutch context, my impression is that power lies in material possessions, institutions, in law and in cultural momentum. Those able to influence the direction of these forces, can be said to wield some power.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Tweede_Kamer_2.jpg">
+    <p>Indeed, the options for power-wielding open to me, given my privilege, seem, at a glance, accessible, almost easy: Petty rebellion, the accumulation of wealth, manipulation, cheating, deception, voting, participation in capitalist markets. I hamper myself with morality and ethics as if carrying a heavy weight by the ankles: if I had no such qualms I assume I could revel in power, or its weaker kin: control, influence, management, aptitude... confidence.</p>
+    <img src="http://students.iitgn.ac.in/palantir/wp-content/uploads/2013/09/Rebellion1.jpg">
+    <p>Most importantly (as some would have me believe), living in what many consider a democracy, I have the ability, no the right! to wield power through suffrage, power that, to people of times and places far, would be unheard of: a privelidge reserved for the few.
+    </p>
+    <img src="https://sisely.logze.nl/files/2017/02/image-16.jpeg">
+    <p>But something: some hidden feeling, tells me that this story: that of a duty to vote, and of a meek greatfulness, is what some would have me believe.</p>
+    <img src="https://lfb.org/wp-content/uploads/2015/04/TinfoilHat.jpg">
+    <p>From history I understand there was a time where power, or legitimacy, rested in the hands of very few, patriarchal family lineages: It rested with violent struggle, and in brutish subjugation. Over time, though various rebellions: most notably the French and American revolutions, violent struggle overcame patriarchal monarchy, and replaced it with a new system that came to be known as constitutional democracy.</p>
+    <img src="http://gamequiche.com/wp-content/uploads/2014/07/assassins_creed_unity_feature.jpg">
+    <p>Rather than a hereditary aristocracy, we have a <a href="#Manin_1997">fluid aristocracy.</a> One where power resides with elected officials, who change over time so as to not draw too much ire.</p>
+    <blockquote>"The founders of modern systems of representative government in Britain, France, and the US recognized the oligarchical or 'aristocratic' tendencies of electoral systems: the tendency of representatives to be superior to the electorate." - Carson, Martin, 1999.</blockquote>
+    <p>Ascribing some blame or conspiracy to this haphazard collection of historicised rhetoric is not a healthy excercise. I am not a political scientist, merely a worried citizen, who wholeheartedly believes in the ideals of democracy, and in the dangers, nay, the pitiful squandering! of aristocracy, and of oligarchy.</p>
+    <img src="http://www.renegadetribune.com/wp-content/uploads/2016/10/ready_for_oligarchy-e1477175267745.jpg">
+    <p>I believe these things because of cultural momentum. In promoting itself as the "least bad system of governance", democracy has made me accustomed and fond of the idea that everyone has the right to make decisions about their lives and livelihoods. That everyone has the right to help set the rules by which they are governed.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Landsgemeinde_Glarus_2006.jpg/1200px-Landsgemeinde_Glarus_2006.jpg">
+    <p>"But the Netherlands is a democracy!" I hear you cry. "It even has proportional representation!" But if you would ask Aristotle, who sadly, is no longer with us, what he would call the Netherlands, he would call it an oligarchy (rule of the few).</p>
+    <img src="https://images.thestar.com/content/dam/thestar/opinion/commentary/2017/03/14/dutch-election-muddied-by-political-party-fragmentation/afpmm8n2.jpg.size-custom-crop.1086x0.jpg">
+    <p>The only political power you have is the power to vote for a flavour, a brand of governance. No one party captures all the nuance of your opinion, and the mechanics of party politics prevent you from wielding the power to shape those brands but through joining them and, by some incorruptible mechanism, rising through the ranks of the power-hungry to have your voice heard.</p>
+    <img src="https://media.nu.nl/m/m1mxm47a9f1s_wd640.jpg/bekijk-uw-politieke-voorkeur-via-stemhulp.jpg">
+    <p>There is an alternative.</p>
+    <blockquote>"There is a system which guarantees [...] that powerful interest groups can have <strong>no</strong> influence whatsoever on the outcome. [...] It does not favour the charismatic, the rich, the well-educated or the well-connected. Votes cannot be bought. It is impossible in this system to be corrupt. [...] It's a brilliant idea" - Stephen Fry</blockquote>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YNzGT0h6A64" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p>This idea is called sortition and it is, essentially, the random assignment of citizens to fill the seats of parliament.</p>
+    
+    <p>The fruit of my childish pondering of this idea has lead me to two conslusions, namely:</p>
+    
+    <ol>
+        <li>Sortition is an idea that is doomed to fail.</li>
+        <li>I am duty bound to persue it nonetheless.</li>
+    </ol>
+    
+    <p>Sortition is doomed because we are afraid of the unknown.</p>
+    <p>To quote an English idiom:</p>
+    <blockquote>"Better the devil you know, than the devil you don't"</blockquote>
+    <img src="http://powerupforsuccess.com/wp-content/uploads/2013/09/fear-of-the-unknown.jpg">
+    
+    <p>It is doomed because making the political process incorruptible goes against the interests of the corrupt, and the source of the corruption. Corruption is extremely profitable! In a world where everything has a price, threatening to take away the toys of the richest and most powerful vested intrests will always end in tears.</p>
+    <img src="https://static2.businessinsider.com/image/59b2b98d609c30390b8b5511-1190-625/bernie-takes-a-swipe-at-hillary-clinton-she-ran-against-the-most-unpopular-candidate-in-the-history-of-this-country-and-she-lost.jpg">
+    
+    <p>Sortition is doomed because humans are tired, fickle things: far to busy putting food on the table to consider the source of their troubles with any salience.</p>
+    <img src="http://i.huffpost.com/gen/1755118/images/o-ASLEEP-AT-WORK-facebook.jpg">
+    <p>It is doomed because those interested want specifics, not deliberation. They crave a mature system that answers their questions, not an idea that posits we can only know how if we start trying.</p>
+    <img src="i_want_answers.gif">
+    
+    <p>Sortition is doomed because, as an idea, it has no immediate utility, it is not easilly communicated, and it has no materiality: no systemetisted physical structures, no rituals or acts of sacrifice. compare that to representative democracy: an idea that offloads the cognitive effort of important decisions onto a stranger, is easilly communicated, is profoundly material (ballot box, ballot paper, red pencil, government buildings), and is ritualised every time we go to vote.</p>
+    <img src="http://cdn1.welingelichtekringen.nl/wp-content/uploads/2015/03/stemmen-ANP_0.jpg">
+    
+    <p>Sortition is doomed because our conditions, our quality of life, are not dire enough to warrant inssurection, and hoping to change the system from within is playing along with a game whose rules are rigged and stacked against you.</p>
+    <img src="https://pics.onsizzle.com/an-accurate-picture-of-me-going-through-life-im-fine-22914366.png">    
+    
+    <p>Imagine trying to convince our so called representatives to vote on legislation that would make their whole career, their life's worth: disolve.</p>
+    
+    <img src="rutte_lach.gif">
+    
+    <p>Fat chance.</p>
+    
+    <p>I am duty bound to persue it nonetheless.</p>
+    
+    <p>I am directly responsible for creating the kind of expression I want to see in the world and the truth is: I'm sold on sortition. I want to see a fluid democracy, guided by RANDOM. The question is then: How to go about what seems to be an impossible task?</p>
+    
+    <img src="sysyfus.gif">
+    
+    <p>In my recconning, the problem has been political for thousands of years: The first democracy was built on sortition, even if it was a sortion of slave owning men, and the idea has resurfaced countless times: each time meeting its political adversairy (corruption) and being soundly beaten through lack of funds.</p>
+    
+    <img src="https://cdn3.geckoandfly.com/wp-content/uploads/2016/07/corruption-power-quotes-27.jpg">
+    
+    <p>The question then, is less: "what is politically interesting/viable with regards to randomness/sortiton", but rather, what is it missing, and possibility, tentatively, how can that which is missed be formed by design, to make way for an acceptance of RANDOM.</p>
+    
+    <img src="https://yt3.ggpht.com/a-/ACSszfGxjQ2zoNjyn0zAtB4SZGHo0eBjQ_tbSO4Xaw=s900-mo-c-c0xffffffff-rj-k-no">
+    
+    <blockquote>What is sortition - an ancient idea still painfully relevant - missing? What is the best possible nudge I could give it?</blockquote>
+    
+    <p>An excelent idea. A profound history: Yet it has almost succumed to the great destroyer (time), and Information Design can play a part in its preservation, and possibly its rennaisance.</p>
+    
+    <p>I propose to start with the Academy. The student union seems an excellent place to start. How is it organised now? How could sortition be implemented? What structures would need to be in place? How can all this be communicated effectively?</p>
+    
+    <p>I doubt that corruption is a big problem in the SU, but representation might be. Now, only people with a passion to take part hold any influence: How would things be different if your average, non politically-active student would attend meetings and draft proposals? How would students react to being randomly selected to take part in important decisions?</p>
+    
+    <p>As for staff, the same may hold. How are leaders selected: How might that change? What would happen if a randomly selected group of students and staff sat down to discuss what they considered to be real problems in the academy? What would happen if they were given a mandate to enact real change?</p>
+    
+    <p>Setting up a real world participatory governance experment would function to build a body of data with which I can experment, learing how to tell the story of sortion.</p>
+    
+    <p>Setting up such an experiment, designing it, giving it physicality, structure and ritual, recording it and disseminating the findings in a unique and effective way, while not "solving" sortition's doom, would go a long way in furthering the cause.</p>
+    
+
+
+    <h1>Refrences</h1>
+    <div id="filter" class="box">
+
+    </div>
+    <ul id="refrences">
+        <li><a href="https://www.youtube.com/watch?v=YNzGT0h6A64">QI on Sortition</a>
+            <p class="benefits">(on how to elect MP's) Host: There is a system which guarantees [...] that powerful interest groups can have <strong>no</strong> influence whatsoever on the outcome. [...] It does not favour the charismatic, the rich, the well-educated or the well-educated. Votes cannot be bought. It is impossible in this system to be corrupt. [...] It' a brilliant idea</p>
+            <p class="jury">It is the same way we choose a jury</p>
+            <p class="opposition">Host: Maybe I shouldn't have used the word lottery</p>
+            <p class="opposition">Guest: How many times could you put it off before they made you do it</p>
+            <p class="opposition">Guest: There are quite a few people I've just thought of I don't want doing it. (reply) Host: Well mostly the ones who want to do it, which are the ones we have</p>
+        </li>
+        <li><a href="https://en.wikipedia.org/wiki/Ambiguity_aversion">Wikipedia: Ambiguity aversion</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Uncertainty_avoidance">Wikipedia: Uncertainty avoidance</a></li>
+        
+        <li><a href="https://medium.com/personal-growth/the-void-and-i-a-story-about-everything-b41a871ecfc9">The void and I, Zat Rana, 2018</a></li>
+        
+        <li><a href="https://duckduckgo.com/?q=randomness+in+politics&t=ffab&atb=v152-1&ia=web">Duckduckgo search for "randomness in politics"</a></li>
+        <li><a href="https://www.bmartin.cc/pubs/99rsip.pdf">Random selection in politics, Carson, Martin, 1999</a>
+            <p class="meta opposition">Many people we’ve talked to find the idea of random selection in politics unnatural and unwelcome. This didn’t deter us!</p>
+            <p class="jury">Random selection worked in ancient Athens. <strong>It works today to select juries</strong> and has proved, through many practical experiments, that it can work well to deal with policy issues.</p>
+            <p class="meta opposition">The ideas in this book are rational but will not be popular with the elites whose power and position will be threatened.</p>
+            <p class="party oligarchy">The tendency of party organizations — including revolutionary ones — to become less participatory and more oligarchical was expounded by Robert Michels nearly a century ago, and little has changed since then (Michels [1915] 1959).</p>
+            <p class="party marketing">Voters are left to choose a color or flavor, a brand</p>
+            <p class="party marketing">In contemporary marketing culture, parties, politicians, and policies are advertised and “sold” just like detergent, movies, or any other commodity, in what can be called “promotional politics” (Wernick 1991: 124-153).</p>
+            <p id="Manin_1997" class="party oligarchy">The founders of modern systems of representative government in Britain, France, and the US recognized the oligarchical or “aristocratic” tendencies of electoral systems: the tendency of representatives to be superior to the electorate. Representative government was seen by its founders, and by leading political commentators at the time, as qualitatively less democratic than the lot system. Although representative government has changed in the past couple of centuries, <strong>its characteristic feature of being a “democratic aristocracy” has remained (Manin 1997).</strong></p>
+            <p class="conflict">Representatives in Western governments function within an adversarial model that permeates local, state, and national levels of governance. <strong>All spheres of government operate in a culture of conflict.</strong></p>
+
+            <p class="conflict exception case">There have been occasional exceptions to the adversarial two-party model. Denmark, for example, had minority governments for all but a few years in the 1900s; its parliamentary decision makers learnt to work with compro-mise and consensus.</p>
+
+            <p class="problem">Social movements and community activists find themselves sucked into this swamp of adversarial politics. Like the governments they condemn, they are vulnerable to replicating hierarchies and placing considerable power into the hands of a few</p>
+
+            <p class="todo">right of recall?</p>
+            <p class="todo">Heart politics movement?</p>
+
+            <p class="conflict exception case">One small exception to this is the Heart Politics movement, now located in a number of countries, particularly Australia, New Zealand, and the U.S. The movement is directed towards a politics of connection rather than confrontation and of finding ways in which leadership might be supported in order to be reformed (Peavey 1984).</p>
+
+
+        </li>
+        <li><a href="UmbertoEco-HowtoWriteaThesis-TheMITPress2015.pdf">How to write a thesis, Eco, (Translation 2015)</a></li>
+        <li><a href="https://www.youtube.com/watch?v=KS9EMvbBq_U">David van Reybrouck - Against Elections </a></li>
+        <li><a href="https://www.vox.com/policy-and-politics/2017/6/1/15515820/donald-trump-democracy-brexit-2016-election-europe?utm_campaign=vox&utm_content=entry&utm_medium=social&utm_source=twitter">The problem with democracy is voters, 2017</a>
+            <p class="voters problem">[voters] don’t spend much time really thinking about political issues of consequence. This idea that people have fixed or informed views about central issues doesn’t square with most of the data we have.</p>
+            <p class="party">When it comes to fundraising and candidate recruitment, the party committees and their allied networks of interest groups have a national reach and ideological cohesion that 19th-century party boss Mark Hanna would have envied.</p>
+            <p class="oligarchy">If you think about democracy in the terms we prefer, you might say the biggest limitation at the moment is that <strong>we don't know how to incorporate the role of political elites in a constructive way</strong> into the governing process or to somehow make it possible to ensure that they're working on behalf of the interests of ordinary people.</p>
+        </li>
+
+    </ul>
+</body>
+
+</html>
