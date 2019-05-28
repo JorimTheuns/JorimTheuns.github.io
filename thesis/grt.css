@@ -1,0 +1,96 @@
+.grt {
+	max-width: 1000px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 29px;
+	line-height: 49px;
+	padding: 30px;
+}
+.grt h1 {
+	font-size: 60px;
+	line-height: 94px;
+	margin-bottom: 49px;
+}
+.grt .title {
+	font-size: 76px;
+	line-height: 117px;
+	margin-bottom: 49px;
+}
+.grt h2 {
+	font-size: 47px;
+	line-height: 75px;
+	margin-top: 79px;
+	margin-bottom: 30px;
+}
+.grt h3 {
+	font-size: 37px;
+	line-height: 61px;
+	margin-top: 49px;
+	margin-bottom: 19px;
+}
+.grt h4 {
+	font-size: 29px;
+	line-height: 49px;
+	font-weight: bold;
+	margin-bottom: 12px;
+}
+.grt p, .grt ul, .grt ol, .grt blockquote, .grt pre, .grt .alert, .grt .note, .grt .box, .grt .footnotes {
+	margin-bottom: 24px;
+    margin-top: 24px;
+}
+.grt ul, .grt ol {
+	margin-left: 49px;
+}
+.grt li {
+	margin-bottom: 19px;
+}
+.grt blockquote {
+	padding-left: 30px;
+	border-style: solid;
+	border-color: rgba(0,0,0,0.15);
+	border-width: 0 0 0 12px;
+}
+.grt sub, .grt sup {
+	padding: 0 1px;
+}
+.grt code, .grt pre, .grt kbd {
+	font-size: 26px;
+}
+.grt code {
+	background-color: rgba(0,0,0,0.08);
+	padding: 6px 7px;
+	border-radius: 12px;
+	margin: 0 1px;
+}
+.grt pre {
+	padding: 19px;
+	border-style: solid;
+	border-color: rgba(0,0,0,0.15);
+	border-width: 0 0 0 12px;
+}
+.grt kbd {
+	background-color: #fff;
+	padding: 6px 7px;
+	border-radius: 7px;
+	box-shadow: 0 0 7px 0 rgba(0,0,0,0.45);
+	margin: 0 1px;
+}
+.grt .alert, .grt .note, .grt .box {
+	padding: 30px;
+}
+.grt .footnotes {
+	font-size: 23px;
+	line-height: 40px;
+	padding-top: 30px;
+	border-top: 1px dotted rgba(0,0,0,0.15);
+}
+.grt .footnotes p {
+	margin-bottom: 30px;
+}
+.grt ul ul, .grt ul ol, .grt ol ul, .grt ol ol, .grt blockquote.right p, .grt blockquote.left p, .grt .alert :last-child, .grt .note :last-child, .grt .box :last-child, .grt .footnotes :last-child {
+	margin-bottom: 0;
+}
+@media all and (min-width: 1098px) {
+	.grt {
+		padding: 49px;
+	}
+}
