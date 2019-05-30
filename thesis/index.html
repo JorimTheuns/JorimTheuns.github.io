@@ -26,19 +26,20 @@
             console.log(allClasses);
 
             allClasses.forEach(function(elem) {
+                var caps = elem.capitalize();
                 var button = $('<button/>', {
-                    text: elem, //set text 1 to 10
+                    text: caps, //set text 1 to 10
                     id: elem,
                     val: "on",
                     click: function() {
                         var val = $("button").val()
                         if (val == "on") {
                             $("#" + this.id).addClass("on");
-                            $("." + this.id).addClass("show");
+                            $("." + this.id).show(500);
                             $("button").val("off")
                         } else if (val == "off") {
                             $("#" + this.id).removeClass("on");
-                            $("." + this.id).removeClass("show");
+                            $("." + this.id).hide(500);
                             $("button").val("on")
                         }
                     }
@@ -57,6 +58,12 @@
             }).appendTo(selector);
         }
 
+        String.prototype.capitalize = function() {
+            return this.replace(/(?:^|\s)\S/g, function(a) {
+                return a.toUpperCase();
+            });
+        };
+
     </script>
 </head>
 
@@ -69,7 +76,7 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Tweede_Kamer_2.jpg">
     <p>Indeed, the options for power-wielding open to me, given my privilege, seem, at a glance, accessible, almost easy: Petty rebellion, the accumulation of wealth, manipulation, cheating, deception, voting, participation in capitalist markets. I hamper myself with morality and ethics as if carrying a heavy weight by the ankles: if I had no such qualms I assume I could revel in power, or its weaker kin: control, influence, management, aptitude... confidence.</p>
     <img src="http://students.iitgn.ac.in/palantir/wp-content/uploads/2013/09/Rebellion1.jpg">
-    <p>Most importantly (as some would have me believe), living in what many consider a democracy, I have the ability, no the right! to wield power through suffrage, power that, to people of times and places far, would be unheard of: a privilege reserved for the few.
+    <p>Most importantly (as some would have me believe), <a href="#Popper">living in what many consider a democracy</a>, I have the ability, no the right! to wield power through suffrage, power that, to people of times and places far, would be unheard of: a privilege reserved for the few.
     </p>
     <img src="https://sisely.logze.nl/files/2017/02/image-16.jpeg">
     <p>But something: some hidden feeling, tells me that this story: that of a duty to vote, and of a meek gratefulness, is what some would have me believe.</p>
@@ -90,67 +97,67 @@
     <blockquote>"There is a system which guarantees [...] that powerful interest groups can have <strong>no</strong> influence whatsoever on the outcome. [...] It does not favour the charismatic, the rich, the well-educated or the well-connected. Votes cannot be bought. It is impossible in this system to be corrupt. [...] It's a brilliant idea" - Stephen Fry</blockquote>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/YNzGT0h6A64" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <p>This idea is called sortition and it is, essentially, the random assignment of citizens to fill the seats of parliament.</p>
-    
+
     <p>The fruit of my childish pondering of this idea has led me to two conclusions, namely:</p>
-    
+
     <ol>
         <li>Sortition is an idea that is doomed to fail.</li>
         <li>I am duty bound to pursue it nonetheless.</li>
     </ol>
-    
-    <p>Sortition is doomed because we are afraid of the unknown.</p>
+
+    <p>Sortition is doomed because <a href="#Ambiguity">we are afraid of the unknown.</a></p>
     <p>To quote an English idiom:</p>
     <blockquote>"Better the devil you know, than the devil you don't"</blockquote>
     <img src="http://powerupforsuccess.com/wp-content/uploads/2013/09/fear-of-the-unknown.jpg">
-    
+
     <p>It is doomed because making the political process incorruptible goes against the interests of the corrupt, and the source of the corruption. Corruption is extremely profitable! In a world where everything has a price, threatening to take away the toys of the richest and most powerful vested interests will always end in tears.</p>
     <img src="https://static2.businessinsider.com/image/59b2b98d609c30390b8b5511-1190-625/bernie-takes-a-swipe-at-hillary-clinton-she-ran-against-the-most-unpopular-candidate-in-the-history-of-this-country-and-she-lost.jpg">
-    
+
     <p>Sortition is doomed because humans are tired, fickle things: far too busy putting food on the table to consider the source of their troubles with any salience.</p>
     <img src="http://i.huffpost.com/gen/1755118/images/o-ASLEEP-AT-WORK-facebook.jpg">
     <p>It is doomed because those interested want specifics, not deliberation. They crave a mature system that answers their questions, not an idea that posits we can only know how if we start trying.</p>
     <img src="i_want_answers.gif">
-    
+
     <p>Sortition is doomed because, as an idea, it has no immediate utility, it is not easily communicated, and it has no materiality: no systematized physical structures, no rituals or acts of sacrifice. compare that to representative democracy: an idea that offloads the cognitive effort of important decisions onto a stranger, is easily communicated, is profoundly material (ballot box, ballot paper, red pencil, government buildings), and is ritualised every time we go to vote.</p>
     <img src="http://cdn1.welingelichtekringen.nl/wp-content/uploads/2015/03/stemmen-ANP_0.jpg">
-    
+
     <p>Sortition is doomed because our conditions, our quality of life, are not dire enough to warrant insurrection, and hoping to change the system from within is playing along with a game whose rules are rigged and stacked against you.</p>
-    <img src="https://pics.onsizzle.com/an-accurate-picture-of-me-going-through-life-im-fine-22914366.png">    
-    
+    <img src="https://pics.onsizzle.com/an-accurate-picture-of-me-going-through-life-im-fine-22914366.png">
+
     <p>Imagine trying to convince our so-called representatives to vote on legislation that would make their whole career, their life's worth: dissolve.</p>
-    
+
     <img src="rutte_lach.gif">
-    
+
     <p>Fat chance.</p>
-    
+
     <p>I am duty bound to pursue it nonetheless.</p>
-    
+
     <p>I am directly responsible for creating the kind of expression I want to see in the world and the truth is: I'm sold on sortition. I want to see a fluid democracy, guided by RANDOM. The question is then: How to go about what seems to be an impossible task?</p>
-    
+
     <img src="sysyfus.gif">
-    
+
     <p>In my reckoning, the problem has been political for thousands of years: The first democracy was built on sortition, even if it was a sortition of slave-owning men, and the idea has resurfaced countless times: each time meeting its political adversary (corruption) and being soundly beaten through lack of funds.</p>
-    
+
     <img src="https://cdn3.geckoandfly.com/wp-content/uploads/2016/07/corruption-power-quotes-27.jpg">
-    
+
     <p>The question then, is less: "what is politically interesting/viable with regards to randomness/sortiton", but rather, what is it missing, and possibility, tentatively, how can that which is missed be formed by design, to make way for an acceptance of RANDOM.</p>
-    
+
     <img src="https://yt3.ggpht.com/a-/ACSszfGxjQ2zoNjyn0zAtB4SZGHo0eBjQ_tbSO4Xaw=s900-mo-c-c0xffffffff-rj-k-no">
-    
+
     <blockquote>What is sortition - an ancient idea still painfully relevant - missing? What is the best possible nudge I could give it?</blockquote>
-    
+
     <p>"A brilliant idea". A profound history: Yet it has almost succumbed to the great destroyer (time), and Information Design can play a part in its preservation, and possibly its renaissance.</p>
-    
+
     <p>I propose to start with the Academy. The student union seems an excellent place to start. How is it organised now? How could sortition be implemented? What structures would need to be in place? How can all this be communicated effectively?</p>
-    
+
     <p>I doubt that corruption is a big problem in the SU, but representation might be. Now, only people with a passion to take part hold any influence: How would things be different if your average, non politically-active student would attend meetings and draft proposals? How would students react to being randomly selected to take part in important decisions?</p>
-    
+
     <p>As for staff, the same may hold. How are leaders selected: How might that change? What would happen if a randomly selected group of students and staff sat down to discuss what they considered to be real problems in the academy? What would happen if they were given a mandate to enact real change?</p>
-    
+
     <p>Setting up a real world participatory governance experiment would function to build a body of data with which I can experiment, learing how to tell the story of portion.</p>
-    
+
     <p>Setting up such an experiment, designing it, giving it physicality, structure and ritual, recording it and disseminating the findings in a unique and effective way, while not "solving" sortition's doom, would go a long way in furthering the cause.</p>
-    
+
 
 
     <h1>Refrences</h1>
@@ -158,20 +165,20 @@
 
     </div>
     <ul id="refrences">
-        <li><a href="https://www.youtube.com/watch?v=YNzGT0h6A64">QI on Sortition</a>
+        <li><a id="QI" href="https://www.youtube.com/watch?v=YNzGT0h6A64">QI on Sortition</a>
             <p class="benefits">(on how to elect MP's) Host: There is a system which guarantees [...] that powerful interest groups can have <strong>no</strong> influence whatsoever on the outcome. [...] It does not favour the charismatic, the rich, the well-educated or the well-educated. Votes cannot be bought. It is impossible in this system to be corrupt. [...] It' a brilliant idea</p>
             <p class="jury">It is the same way we choose a jury</p>
             <p class="opposition">Host: Maybe I shouldn't have used the word lottery</p>
             <p class="opposition">Guest: How many times could you put it off before they made you do it</p>
             <p class="opposition">Guest: There are quite a few people I've just thought of I don't want doing it. (reply) Host: Well mostly the ones who want to do it, which are the ones we have</p>
         </li>
-        <li><a href="https://en.wikipedia.org/wiki/Ambiguity_aversion">Wikipedia: Ambiguity aversion</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Uncertainty_avoidance">Wikipedia: Uncertainty avoidance</a></li>
-        
-        <li><a href="https://medium.com/personal-growth/the-void-and-i-a-story-about-everything-b41a871ecfc9">The void and I, Zat Rana, 2018</a></li>
-        
-        <li><a href="https://duckduckgo.com/?q=randomness+in+politics&t=ffab&atb=v152-1&ia=web">Duckduckgo search for "randomness in politics"</a></li>
-        <li><a href="https://www.bmartin.cc/pubs/99rsip.pdf">Random selection in politics, Carson, Martin, 1999</a>
+        <li id="Ambiguity"><a href="https://en.wikipedia.org/wiki/Ambiguity_aversion">Wikipedia: Ambiguity aversion</a></li>
+        <li><a id="Uncertainty" href="https://en.wikipedia.org/wiki/Uncertainty_avoidance">Wikipedia: Uncertainty avoidance</a></li>
+
+        <li><a id="the_void" href="https://medium.com/personal-growth/the-void-and-i-a-story-about-everything-b41a871ecfc9">The void and I, Zat Rana, 2018</a></li>
+
+        <li><a id="search" href="https://duckduckgo.com/?q=randomness+in+politics&t=ffab&atb=v152-1&ia=web">Duckduckgo search for "randomness in politics"</a></li>
+        <li><a id="Carson_Martin" href="https://www.bmartin.cc/pubs/99rsip.pdf">Random selection in politics, Carson, Martin, 1999</a>
             <p class="meta opposition">Many people we’ve talked to find the idea of random selection in politics unnatural and unwelcome. This didn’t deter us!</p>
             <p class="jury">Random selection worked in ancient Athens. <strong>It works today to select juries</strong> and has proved, through many practical experiments, that it can work well to deal with policy issues.</p>
             <p class="meta opposition">The ideas in this book are rational but will not be popular with the elites whose power and position will be threatened.</p>
@@ -192,13 +199,14 @@
 
 
         </li>
-        <li><a href="UmbertoEco-HowtoWriteaThesis-TheMITPress2015.pdf">How to write a thesis, Eco, (Translation 2015)</a></li>
-        <li><a href="https://www.youtube.com/watch?v=KS9EMvbBq_U">David van Reybrouck - Against Elections </a></li>
-        <li><a href="https://www.vox.com/policy-and-politics/2017/6/1/15515820/donald-trump-democracy-brexit-2016-election-europe?utm_campaign=vox&utm_content=entry&utm_medium=social&utm_source=twitter">The problem with democracy is voters, 2017</a>
+        <li><a id="Eco" href="UmbertoEco-HowtoWriteaThesis-TheMITPress2015.pdf">How to write a thesis, Eco, (Translation 2015)</a></li>
+        <li><a id="Reybrouck" href="https://www.youtube.com/watch?v=KS9EMvbBq_U">David van Reybrouck - Against Elections </a></li>
+        <li><a id="Vox" href="https://www.vox.com/policy-and-politics/2017/6/1/15515820/donald-trump-democracy-brexit-2016-election-europe?utm_campaign=vox&utm_content=entry&utm_medium=social&utm_source=twitter">The problem with democracy is voters, 2017</a>
             <p class="voters problem">[voters] don’t spend much time really thinking about political issues of consequence. This idea that people have fixed or informed views about central issues doesn’t square with most of the data we have.</p>
             <p class="party">When it comes to fundraising and candidate recruitment, the party committees and their allied networks of interest groups have a national reach and ideological cohesion that 19th-century party boss Mark Hanna would have envied.</p>
             <p class="oligarchy">If you think about democracy in the terms we prefer, you might say the biggest limitation at the moment is that <strong>we don't know how to incorporate the role of political elites in a constructive way</strong> into the governing process or to somehow make it possible to ensure that they're working on behalf of the interests of ordinary people.</p>
         </li>
+        <li><a id="Popper" href="https://monoskop.org/images/5/5f/Popper_Karl_The_Open_Society_and_Its_Enemies_Vols_1-2_5th_ed.pdf">The Open Society and its Enemies, Karl Popper, 1962</a></li>
 
     </ul>
 </body>
