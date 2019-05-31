@@ -4,6 +4,16 @@
 }
 
 @font-face {
+    font-family: SpaceFontLight;
+    src: url("SpaceGrotesk-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: SpaceFontBold;
+    src: url("SpaceGrotesk-Bold.otf") format("opentype");
+}
+
+@font-face {
     font-family: BeatriceDisplayLight;
     src: url("BeatriceDisplay-Light.otf") format("opentype");
 }
@@ -44,6 +54,14 @@ h3,
 p,
 blockquote {
     line-height: 1.4em;
+}
+
+h4,h5{
+    font-family: SpaceFontBold;
+}
+
+i{
+    font-family: SpaceFontLight;
 }
 
 h1 {
@@ -241,6 +259,7 @@ body {
 
 img,
 video { 
+    transition: all 1s ease;
     max-width: 100%;
     z-index: 50;
 }
@@ -264,9 +283,19 @@ iframe {
     top: 0;
 }
 
+.bw{
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
 .invert {
     -webkit-filter: invert(1);
     filter: invert(1);
+}
+
+.invert.bw{
+    -webkit-filter: invert(1) grayscale(1);
+    filter: invert(1) grayscale(1);
 }
 
 .main-grid {

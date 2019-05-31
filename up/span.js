@@ -1,5 +1,5 @@
 $(function() {
-            $('h1, h2, h3, p, blockquote, a').wrapInner("<span></span>");
+            $('h1, h2, h3, h4, h5, p, blockquote, a, i').wrapInner("<span></span>");
         });
 
 

@@ -1,4 +1,35 @@
-.language-table{
+body{
+    background: #444;
+}
+
+.images{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-auto-flow: dense;
+    grid-gap: 10px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.images img {
+  transition: transform .5s ease-in-out,
+            box-shadow .5s ease-in-out,
+      z-index 1s ease;/* Animation */
+}
+
+.images img:hover {
+    z-index: 99;
+  transform: scale(1.5);
+box-shadow: 8px 8px 10px black;
+}
+
+.portrait{
+    grid-row: span 2;
+}
+    
+    
+    .language-table{
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
     grid-template-rows: auto auto auto auto;
@@ -12,6 +43,10 @@
 
 img{
     max-width: 100%;
+}
+
+i {
+    font-family: "Space Grotesk Light", Helvetica, sans-serif;
 }
 
 
