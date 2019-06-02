@@ -16,8 +16,66 @@ body {
 }
 
 :target {
-    animation: highlight 2s ease;
+    animation: highlight 5s ease;
 }
+
+i{
+    transform: skewX(10deg);
+}
+
+
+.trinity{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: 'a one two three' 'four b b b' 'five b b b' 'six b b b';
+    grid-template-columns: min-content min-content min-content min-content;
+    grid-template-rows: min-content min-content min-content min-content;
+    font-size:80%;
+    line-height: 80%;
+    transform-origin: center;
+    
+}
+.item{
+display: grid;            /* new */
+  align-items: center;      /* new */
+  justify-items: center;
+}
+.trinity div{
+    text-transform: capitalize;
+    background-color: ;
+    padding:10px;
+    border: 5px solid black;
+}
+.trinity div:nth-child(1){
+    grid-area: one;
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+    
+}
+.trinity div:nth-child(2){
+    grid-area: two;
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+}
+.trinity div:nth-child(3){
+    grid-area: three;
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+}
+.trinity div:nth-child(4){
+    grid-area: four;
+}
+.trinity div:nth-child(5){
+    grid-area: five;
+}
+.trinity div:nth-child(6){
+    grid-area: six;
+}
+.trinity div:nth-child(7+n){
+    grid-area: b;
+    text-align: center;
+}
+
 
 @keyframes highlight {
     0% {
