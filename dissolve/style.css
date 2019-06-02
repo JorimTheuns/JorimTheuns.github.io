@@ -1,0 +1,86 @@
+@font-face {
+    font-family: SpaceFontLight;
+    src: url("/up/SpaceGrotesk-Light.otf") format("opentype");
+}
+
+* {
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    border: 0 none;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    z-index: inherit;
+    transition: transform .4s ease-in-out;
+    font-family: 'SpaceFontLight';
+}
+
+body2{
+    background-image: url("/leaflet/bone_and_slate/Bones_and_slate%20-%201.jpg");
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
+body{
+    background: black;
+    color: #fff;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-template-areas: 'hd tx tx' 'hd b1 b2' 'hd dc dc';
+    grid-gap: 5px;
+}
+
+.title{
+    padding-bottom: 28px;
+    align-self: start;
+    grid-area: hd;
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+    font-family: 'Beatrice Display Semibold';
+}
+
+.text {
+    grid-area: tx;
+}
+
+.desc{
+    grid-area: dc;
+}
+
+a.button{
+    padding:20px;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: #fff;
+    background-size: cover;
+    font-size:300%;
+    line-height:120%;
+}
+
+span {
+    font-family: 'Beatrice Display Semibold';
+    filter: drop-shadow(1px 1px 5px #0004);
+}
+
+.invert{
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+
+.b1{
+    grid-area: b1;
+    background-image: url(/up/Physics/milkyway_panorama_small.jpg);
+}
+
+.b2{
+    grid-area: b2;
+     background-image: url(/leaflet/bone_and_slate/Bones_and_slate%20-%2026.jpg);
+}
